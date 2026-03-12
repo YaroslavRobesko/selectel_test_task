@@ -1,0 +1,15 @@
+<div class="menu-list">
+  @for (item of items; track item.name) {
+    <div class="input-block">
+      <input
+        [id]="item.name"
+        [name]="item.name"
+        type="checkbox"
+        [value]="item.value"
+        [checked]="isItemActive(item.name)"
+        (change)="handleChange($event)"
+      />
+      <label [for]="item.name">{{ item.name }} - {{item.value}}</label>
+    </div>
+  }
+</div>

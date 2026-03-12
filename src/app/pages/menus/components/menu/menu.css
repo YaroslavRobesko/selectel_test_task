@@ -1,0 +1,10 @@
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-block{
+    display: flex;
+    gap: 5px;
+}
