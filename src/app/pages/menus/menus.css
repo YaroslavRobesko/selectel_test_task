@@ -1,0 +1,32 @@
+.menus-container{
+    display: grid;
+    grid-template-columns: 0.1fr 0.9fr;
+    grid-column-gap: 15px;
+}
+
+.nav{
+    border-right: 1px solid black;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.nav-item{
+    cursor: pointer;
+}
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid black;
+}
+
+.menu-list-container{
+    padding: 10px;
+}
+
+h1{
+    font-size: 16px;
+}

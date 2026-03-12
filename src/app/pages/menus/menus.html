@@ -1,0 +1,27 @@
+<div>
+  <h1 class="title">
+    <div>Раздел: {{ menuName }}</div>
+    <div>Сумма: {{activeInputsArr[menuName].reduce((sum, item) => sum + item.value, 0)}}</div>
+    <div>Выбрано пунктов: {{ activeInputsArr[menuName].length }}</div>
+    <a href="">На главную</a>
+  </h1>
+  <div class="menus-container">
+    <nav class="nav">
+      <ul>
+        @for (menu of Object.keys(menusObj); track menu) {
+          <li class="nav-item" (click)="changeMenu(menu)" [style]="menuName === menu ? 'color:blue' : ''">
+            {{ menu }}
+          </li>
+        }
+      </ul>
+    </nav>
+    <div class="menu-list-container">
+      <app-menu
+        [items]="menusObj[menuName]"
+        [menuName]="menuName"
+        [activeItems]="activeInputsArr[menuName]"
+        (itemsChanged)="onItemsChange($event)"
+      ></app-menu>
+    </div>
+  </div>
+</div>
