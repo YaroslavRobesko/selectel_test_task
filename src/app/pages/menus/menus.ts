@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Menu } from './components/menu/menu';
 import { Item } from './types/types';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menus',
-  imports: [Menu],
+  imports: [Menu, RouterLink],
   templateUrl: './menus.html',
   styleUrl: './menus.css',
 })
