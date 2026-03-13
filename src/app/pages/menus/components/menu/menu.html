@@ -2,6 +2,7 @@
   @for (item of items; track item.name) {
     <div class="input-block">
       <input
+        class="input-block__input"
         [id]="item.name"
         [name]="item.name"
         type="checkbox"
@@ -9,7 +10,7 @@
         [checked]="isItemActive(item.name)"
         (change)="handleChange($event)"
       />
-      <label [for]="item.name">{{ item.name }} - {{item.value}}</label>
+      <label class="input-block__label" [for]="item.name">{{ item.name }} - {{ item.value }}</label>
     </div>
   }
 </div>

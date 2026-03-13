@@ -1,0 +1,80 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.main__title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.main__subtitle {
+  font-size: 18px;
+}
+
+.main__img{
+    width: 100%;
+    height: 50px;
+    background-image: url("./assets/angular_wordmark.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.action-button {
+  font-size: 14px;
+  padding: 10px 30px;
+  border-radius: 15px;
+  background-color: hsl(0, 100%, 61%);
+  color: white;
+  font-weight: 600;
+  transition:
+    background-color 0.5s ease-out 0.1s,
+    width 1s linear;
+}
+
+@media (hover: hover) {
+  .action-button:hover {
+    background-color: hsl(0, 84%, 68%);
+  }
+}
+
+@media (min-width: 640px) {
+  .action-button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .action-button {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 640px) {
+  .main__title {
+    font-size: 24px;
+  }
+  .main__subtitle {
+    font-size: 20px;
+  }
+  .main__img{
+    height: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main__title {
+    font-size: 32px;
+  }
+  .main__subtitle {
+    font-size: 24px;
+  }
+
+  .main__img{
+    height: 100px;
+  }
+}
